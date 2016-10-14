@@ -1,0 +1,15 @@
+{
+  "name": "cellautomata",
+  "version": "1.0.0",
+  "description": "Some experimentation with celular automata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cellular",
+    "automata"
+  ],
+  "author": "Mihai Roman",
+  "license": "ISC"
+}

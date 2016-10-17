@@ -1,0 +1,14 @@
+.element {
+    display: inline-block;
+    min-width: 5px;
+    min-height: 5px;
+    margin: 1px;
+}
+
+.element.active {
+    background-color: #42c2f4;
+}
+
+.element.inactive {
+    background-color: #c6c6c6;
+}

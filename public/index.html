@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Cell automata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"></style>
+</head>
+
+<body>
+    <div id="initRow">
+    </div>
+
+    <script type="text/javascript">
+        (function() {
+            const elemWidth = 5,
+                elemsSpace = 2;
+
+            var model = {
+
+            };
+
+            var octopus = {
+                getRandomBin: function() {
+                    var min = 0,
+                        max = 1;
+                    return Math.floor(
+                        Math.random() * (max - min + 1)
+                    )
+                },
+
+                getMaxElemsInRow: function() {
+                    var screenWidth = window.innerWidth;
+                    var maxElems = screenWidth / (elemWidth + elemsSpace);
+                    return maxElems;
+                },
+
+                init: function() {
+                    view.render();
+                }
+            };
+
+            var view = {
+                render: function() {
+                    var i = Math.floor(octopus.getMaxElemsInRow())-2;
+                    while (i--) {
+                        var elem = document.createElement('div');
+                        elem.classList.add("element");
+                        elem.classList.add(octopus.getRandomBin() ? 'active' : 'inactive');
+                        document.getElementById("initRow").appendChild(elem);
+                    }
+                }
+            };
+
+            octopus.init();
+        })();
+    </script>
+</body>
+
+</html>

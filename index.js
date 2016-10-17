@@ -5,12 +5,10 @@ var port = Number(process.env.PORT || 3000);
 
 app = express();
 app.use(morgan('dev'));
+app.use(express.static(__dirname + '/public'));
 
-app.all("/", function(req, res, next) {
-    res.writeHead(200, {
-        'Content-Type': 'text/plain'
-    });
-    res.end("Hello World!!!");
+app.get("/", function(req, res, next) {
+    res.sendFile("index.html")
 });
 
-app.listen(port);   
+app.listen(port);

@@ -6,4 +6,6 @@ applications to Heroku.
 
 Heroku link: http://cell-automata.herokuapp.com
 
-Future expansions : implementation of multiple sets of rules (generate the one selected by the user)
+Future improvements : 
+  - implementation of multiple sets of rules (generate the one selected by the user)
+  - take the generation script out of index.html
